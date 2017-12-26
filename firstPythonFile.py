@@ -166,3 +166,25 @@ print(Class3.__dict__)
 print(object3.__dict__)
 
 print(sys.path)
+
+for i in range(0,5):
+    sTemp = ' '*(40-2*i-i//2)+'*'*(4*i+1+i)
+    print(sTemp)
+for i in range(2,8):
+    sTemp = ' '*(40-2*i-i//2)+'*'*(4*i+1+i)
+    print(sTemp)
+for i in range(3,12):
+    sTemp = ' '*(40-2*i-i//2)+'*'*(4*i+1+i)
+    print(sTemp)
+for i in (2,2):
+    sTemp = ' '*(40-2*i-i//2)+'*'*(4*i+1+i)
+    print(sTemp)
+
+#字符串重新赋值
+sWriteStr = 'bee'
+#sWriteStr[0] = 'a'
+#ByteStr = bytearray(sWriteStr)
+#ByteStr[0] = 'a'
+#print(ByteStr)
+
+
