@@ -1,5 +1,6 @@
 import random
 import sys
+import os
 
 print("Bee")
 var = 42
@@ -187,4 +188,73 @@ sWriteStr = 'bee'
 #ByteStr[0] = 'a'
 #print(ByteStr)
 
+def Two(x):
+    return x**2
+#解析
+OuShuSet = {Two(x) for x in range(10) if x%2 == 0}
+print(OuShuSet)
 
+#枚举化，每个元素为一个元组
+NumberList = ["one", "two", "three", "four"]
+enumList = list(enumerate(NumberList))
+print(enumList)
+
+enumTuple = tuple(enumerate(NumberList, start=1))
+print(enumTuple)
+
+#多重解析
+MutiParese = [(x+1, y+1) for x in range(4) for y in range(x)]
+print(MutiParese)
+
+
+
+#拉链函数，返回包含元组的列表
+ZipNum = [1, 2, 3, 4]
+ZipStr = ["one", "two", "three", "four"]
+
+for zipN, zipS in zip(ZipNum,ZipStr):
+    print('{0}:{1}'.format(zipN, zipS))
+
+#*传内容而非本身，适用于所有传参
+ZipResult = zip(ZipNum, ZipStr)
+for ZipItem in zip(*ZipResult):
+    print(ZipItem)
+
+#使用字典数据结构传递关键字型参数
+
+#浅拷贝、深拷贝
+#问题较多的地方
+
+#异常捕获完全体
+try:
+    #有可能发生异常的部分
+    x = 10
+    y = 0
+    z = x/y
+except:
+    #异常捕获处理
+    print("Have one except")
+else:
+    #未发生异常的处理
+    print("normal")
+finally:
+    #是否发生异常均需处理
+    print("finished")
+
+FileContext = ["姓 , 名字 , 身份证号码\n",
+"卢克 , 万德哈 , 1\n",
+"瑞验 , 杻丰德 , 2\n"]
+
+f = open("temp.txt", mode="x", encoding='utf-8')
+for ContextItem in FileContext:
+    f.write(ContextItem)
+f.close()
+
+with open("temp.txt", mode="r", encoding='utf-8') as f:
+    Mark = True
+    while Mark:
+        sTemp = f.readline()
+        Mark = sTemp != ""
+        print(sTemp)
+
+os.remove("temp.txt")
