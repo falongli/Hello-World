@@ -1,20 +1,20 @@
 import random
 import sys
 
-print("lifalong")
+print("Bee")
 var = 42
 print(var)
 
 #字符串分片
-string = "wo shi li fa long"
+string = "wo shi Bee"
 print(string[0])
 print(string[1:])
 print(string[:1])
 print(string[3:6])
 print(string[-1])
 
-Name = "li\
-falong"
+Name = "Bee\
+Bee"
 print(Name)
 
 OtherName = Name.replace(Name[:1], 'Y'*2)
@@ -25,7 +25,7 @@ print(OtherName)
 #print(url)
 #缩进的语句块表示语句的逻辑cunshu关系
 def funcion():
-    return "lifalong"
+    return "Bee"
 print(funcion())
 len(funcion())
 
@@ -53,9 +53,9 @@ print(calc(H=3, L=1, B=2))#关键词传参
 #file.write("wo shi lifalong")
 
 #成员运算符 in   归属运算符  is
-List = ["lifalong", "Gansu", 1986]
+List = ["Bee", "GS", 1986]
 
-bResult = "lifalong" in List
+bResult = "Bee" in List
 print(bResult)
 
 print(List[0])
@@ -79,7 +79,7 @@ def conditionFunc(bCon):
     if bCon:
         print("bCon:", bCon)
     else:
-        print("lifalong")
+        print("Bee")
 
 conditionFunc(True)
 conditionFunc(False)
