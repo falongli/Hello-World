@@ -1,6 +1,8 @@
 import random
 import sys
 import os
+import Second
+#from Second import OneFunc
 
 print("Bee")
 var = 42
@@ -258,3 +260,6 @@ with open("temp.txt", mode="r", encoding='utf-8') as f:
         print(sTemp)
 
 os.remove("temp.txt")
+
+#OneFunc()
+print(dir(Second))
