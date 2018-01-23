@@ -25,7 +25,7 @@ def main():
 	data = list(data)
 	wendushidu = soup.find_all('div', id='rettemp')
 	wendushidu = str(wendushidu)
-	re1 = r'\d{0,3}\.\d{1,2}\°' #匹配温度
+	re1 = r'-?\d{0,3}\.\d{1,2}\°' #匹配温度
 	re2 = r'相对湿度：\d{0,3}\%'
 	re1_data = re.search(re1, wendushidu)
 	re2_data = re.search(re2, wendushidu)

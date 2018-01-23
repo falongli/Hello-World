@@ -165,8 +165,10 @@ class Class3(Class1):
         self.a=42
 object3 = Class3()
 print(object3.a)
+print(Class3.a)
 print(Class3.__dict__)
 print(object3.__dict__)
+print('*'*50)
 
 print(sys.path)
 

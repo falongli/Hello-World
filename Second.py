@@ -1,5 +1,10 @@
 #coding:utf-8
 import re
+from os import path
+import sys
+"""
+the second python program
+"""
 
 sTemp = 'haha'
 print(sTemp)
@@ -24,6 +29,7 @@ print('OneFunc is local function:{0}'.format(bGlobal))
 fs = [(lambda n, i=i: i + n) for i in range(10)]
 print(fs[4](3))
 print(fs[5](3))
+print(fs[9](3))
 
 varDic = dict(vars())
 
@@ -59,5 +65,19 @@ class TestDemo(object):
 test_demo = TestDemo()
 print(test_demo.FINAL_VAR) # 访问常量
 print(test_demo.public_var) # 访问一般变量
+print(test_demo.__maker__)
 #print(test_demo.__private_var)# 访问私有变量，运行会报错
 #test_demo.__private_method() # 访问私有方法，运行会报
+
+#以两个下划线开头的变量和方法均为私有，不可在外部进行访问
+
+
+sPath = __file__
+print(sPath)
+sDir = path.dirname(sPath)
+print(sDir)
+sFileName = path.basename(sPath)
+print(sFileName)
+
+for i in sys.path:
+    print(i)
