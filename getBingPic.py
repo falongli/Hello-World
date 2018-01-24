@@ -8,6 +8,7 @@ import os
 local = time.strftime("%Y.%m.%d")
 url = 'http://cn.bing.com'
 con = requests.get(url)
+bHave = False
 
 #soup = BeautifulSoup(con.content, "html.parser")
 #print(soup.prettify(encoding="utf-8"))
@@ -18,6 +19,7 @@ if tag:
     urlEnd = tag.group()
     if urlEnd:
         url = url + urlEnd
+        global bHave
         bHave = True
 
     if bHave:
